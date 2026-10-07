@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ChevronRight } from "lucide-react";
+import { GoogleIcon } from "@/components/SocialIcons";
 
 interface HeroProps {
   onOpenEnquire?: () => void;
@@ -55,6 +56,31 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
           >
             Explore Services
           </a>
+        </div>
+
+        {/* Google Reviews & Trust Badges */}
+        <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-white/15">
+          <a
+            href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 transition-all group"
+          >
+            <div className="p-1.5 bg-white rounded-lg shadow-sm">
+              <GoogleIcon className="w-4 h-4" />
+            </div>
+            <div className="text-left">
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-sm text-white">4.9 / 5.0</span>
+                <span className="text-amber-400 text-xs">★★★★★</span>
+              </div>
+              <p className="text-[11px] text-gray-300 font-light">Verified Google Reviews</p>
+            </div>
+          </a>
+          <div className="hidden sm:flex flex-col text-left text-xs text-gray-300 pl-2">
+            <span className="font-semibold text-white">100% FTA Compliant</span>
+            <span className="text-gray-400 font-light">Registered Tax Agents in Dubai</span>
+          </div>
         </div>
       </div>
 

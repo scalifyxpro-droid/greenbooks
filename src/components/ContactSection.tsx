@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
-import { LinkedInIcon, InstagramIcon, WhatsAppIcon } from "@/components/SocialIcons";
+import { LinkedInIcon, InstagramIcon, WhatsAppIcon, GoogleIcon } from "@/components/SocialIcons";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -133,6 +133,15 @@ export default function ContactSection() {
                   className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-white hover:bg-[#E4405F] hover:border-[#E4405F] transition-colors"
                 >
                   <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Google Business"
+                  className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:border-gray-400 bg-white hover:shadow-sm transition-all"
+                >
+                  <GoogleIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { LinkedInIcon, InstagramIcon, WhatsAppIcon } from "@/components/SocialIcons";
+import { LinkedInIcon, InstagramIcon, WhatsAppIcon, GoogleIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
   return (
@@ -96,6 +96,30 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#E4405F] flex items-center justify-center transition-all duration-200"
               >
                 <InstagramIcon className="w-4 h-4 text-white" />
+              </a>
+              <a
+                href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Business Profile"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white flex items-center justify-center transition-all duration-200"
+              >
+                <GoogleIcon className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Google Rating Trust Badge */}
+            <div className="pt-2">
+              <a
+                href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 hover:border-white/25 px-3 py-1.5 rounded-lg text-xs text-gray-200 transition-colors"
+              >
+                <GoogleIcon className="w-3.5 h-3.5" />
+                <span className="font-semibold text-white">4.9</span>
+                <span className="text-amber-400">★★★★★</span>
+                <span className="text-[10px] text-gray-300">Google Reviews</span>
               </a>
             </div>
           </div>
