@@ -14,7 +14,7 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/hero1.webp"
+          src="/stock-images/13-dubai-skyline-downtown.jpg"
           alt="Dubai Skyline Business District"
           fill
           priority
@@ -61,7 +61,7 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
         {/* Google Reviews & Trust Badges */}
         <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-white/15">
           <a
-            href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+            href="https://maps.google.com/?q=Green+Books+Accounting+and+Tax+Services+Acico+Business+Park+Dubai"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 transition-all group"

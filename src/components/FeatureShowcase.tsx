@@ -94,7 +94,7 @@ export default function FeatureShowcase({ onOpenEnquire }: FeatureShowcaseProps)
 
         <div className="w-full md:w-1/2 relative min-h-[350px] md:min-h-[500px]">
           <Image
-            src="/home-bs.jpg"
+            src="/stock-images/04-business-setup-dubai.jpg"
             alt="Green Books Business Setup Dubai"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -173,7 +173,7 @@ export default function FeatureShowcase({ onOpenEnquire }: FeatureShowcaseProps)
 
         <div className="w-full md:w-1/2 relative min-h-[350px] md:min-h-[500px]">
           <Image
-            src="/home-bs-2.jpg"
+            src="/stock-images/bookkeeping-ledger-paper.jpg"
             alt="Green Books Financial Planning and Corporate Tax"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -252,7 +252,7 @@ export default function FeatureShowcase({ onOpenEnquire }: FeatureShowcaseProps)
 
         <div className="w-full md:w-1/2 relative min-h-[350px] md:min-h-[500px]">
           <Image
-            src="/home-bs-3.jpg"
+            src="/stock-images/05-bank-account-opening.jpg"
             alt="Business Banking and Compliance Green Books Dubai"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -322,7 +322,7 @@ export default function FeatureShowcase({ onOpenEnquire }: FeatureShowcaseProps)
 
         <div className="w-full md:w-1/2 relative min-h-[350px] md:min-h-[500px]">
           <Image
-            src="/home-bs-4.jpg"
+            src="/stock-images/18-financial-growth-analytics.jpg"
             alt="Refer and Earn Rewards with Green Books"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

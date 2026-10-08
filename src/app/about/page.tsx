@@ -37,12 +37,12 @@ const BENEFITS = [
 ];
 
 const GALLERY = [
-  "/1.jpg",
-  "/2.jpg",
-  "/3.jpg",
-  "/4.jpg",
-  "/5.jpg",
-  "/6.jpg",
+  "/stock-images/01-corporate-tax-uae.jpg",
+  "/stock-images/02-accounting-bookkeeping.jpg",
+  "/stock-images/03-audit-assurance.jpg",
+  "/stock-images/09-trade-license-dubai.jpg",
+  "/stock-images/10-golden-visa-uae.jpg",
+  "/stock-images/11-software-cloud-accounting.jpg",
 ];
 
 export default function AboutPage() {
@@ -52,8 +52,8 @@ export default function AboutPage() {
       <section className="relative w-full py-24 md:py-32 bg-[#2E3880] text-white overflow-hidden">
         <div className="absolute inset-0 w-full h-full opacity-20">
           <Image
-            src="/about.jpg"
-            alt="About Green Books Team Dubai"
+            src="/stock-images/14-dubai-difc-architecture.jpg"
+            alt="About Green Books Dubai Headquarters"
             fill
             priority
             className="object-cover"
@@ -109,8 +109,8 @@ export default function AboutPage() {
 
           <div className="relative min-h-[420px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/home-about.jpg"
-              alt="Green Books Leadership"
+              src="/stock-images/audit-tax-documents.jpg"
+              alt="Green Books Audit and Tax Advisory Services"
               fill
               className="object-cover"
             />

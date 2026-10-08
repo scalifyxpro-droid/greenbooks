@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Books - Curated Stock Images Preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0B132B;
+      color: #F8FAFC;
+      padding: 40px 24px;
+    }
+    .header {
+      max-width: 1200px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: #94A3B8;
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(46, 175, 125, 0.2);
+      color: #2EAF7D;
+      border: 1px solid rgba(46, 175, 125, 0.4);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #1C2541;
+      border: 1px solid #3A506B;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+      border-color: #2EAF7D;
+    }
+    .card-img-wrap {
+      width: 100%;
+      height: 220px;
+      background: #0f172a;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .card-img-wrap img {
+      transform: scale(1.05);
+    }
+    .card-body {
+      padding: 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2EAF7D;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: #94A3B8;
+      line-height: 1.45;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+    .card-footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: #64748B;
+    }
+    .filename {
+      font-family: monospace;
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #CBD5E1;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">Green Books • Curated Stock Images Collection</div>
+    <h1>Stock Images Preview Gallery</h1>
+    <p>Review the updated image collection below or in Finder. Focused on bookkeeping documents, audit paperwork, tax records, and modern Dubai business imagery.</p>
+  </div>
+
+  <div class="grid">
+    <!-- NEW PAPER / AUDIT / BOOKKEEPING IMAGES -->
+    <div class="card">
+      <div class="card-img-wrap"><img src="./bookkeeping-ledger-paper.jpg" alt="Bookkeeping Ledger & Receipts" /></div>
+      <div class="card-body">
+        <div class="card-tag">Bookkeeping & Invoicing</div>
+        <div class="card-title">Bookkeeping Ledger & Invoices</div>
+        <div class="card-desc">Calculator, receipts, invoice paperwork, and financial records on desk.</div>
+        <div class="card-footer"><span class="filename">bookkeeping-ledger-paper.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./audit-tax-documents.jpg" alt="Audit & Tax Documents" /></div>
+      <div class="card-body">
+        <div class="card-tag">Audit & Tax</div>
+        <div class="card-title">Audit Reports & Tax Sheets</div>
+        <div class="card-desc">Official audit reports, tax documentation review, pen, and balance reconciliations.</div>
+        <div class="card-footer"><span class="filename">audit-tax-documents.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./accounting-books-records.jpg" alt="Accounting Books & Records" /></div>
+      <div class="card-body">
+        <div class="card-tag">Books & Planning</div>
+        <div class="card-title">Green Books & Financial Records</div>
+        <div class="card-desc">Hardcover accounting books, spectacles, fountain pen, and strategic records.</div>
+        <div class="card-footer"><span class="filename">accounting-books-records.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./tax-forms-calculator-paper.jpg" alt="Tax Forms & Calculator" /></div>
+      <div class="card-body">
+        <div class="card-tag">Tax Filing</div>
+        <div class="card-title">Tax Forms & Financial Analytics</div>
+        <div class="card-desc">Printed financial graphs, tax calculation breakdown, charts, and coffee.</div>
+        <div class="card-footer"><span class="filename">tax-forms-calculator-paper.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./financial-audit-reports.jpg" alt="Financial Audit Reports" /></div>
+      <div class="card-body">
+        <div class="card-tag">Assurance & Audit</div>
+        <div class="card-title">Financial Audit Papers & Charts</div>
+        <div class="card-desc">Color financial charts, quarterly audit papers, and compliance review documents.</div>
+        <div class="card-footer"><span class="filename">financial-audit-reports.jpg</span></div>
+      </div>
+    </div>
+
+    <!-- SERVICES & BRAND IMAGES -->
+    <div class="card">
+      <div class="card-img-wrap"><img src="./01-corporate-tax-uae.jpg" alt="Corporate Tax UAE" /></div>
+      <div class="card-body">
+        <div class="card-tag">Taxation</div>
+        <div class="card-title">Corporate Tax in UAE</div>
+        <div class="card-desc">Financial calculator, tax compliance documents & return preparation.</div>
+        <div class="card-footer"><span class="filename">01-corporate-tax-uae.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./02-accounting-bookkeeping.jpg" alt="Accounting & Bookkeeping" /></div>
+      <div class="card-body">
+        <div class="card-tag">Accounting</div>
+        <div class="card-title">Accounting & Bookkeeping</div>
+        <div class="card-desc">Professional accountant balancing ledgers, financial statements, and accounts.</div>
+        <div class="card-footer"><span class="filename">02-accounting-bookkeeping.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./03-audit-assurance.jpg" alt="Audit & Assurance" /></div>
+      <div class="card-body">
+        <div class="card-tag">Assurance</div>
+        <div class="card-title">Statutory Audit & Assurance</div>
+        <div class="card-desc">Auditor meticulously inspecting financial statements and internal controls.</div>
+        <div class="card-footer"><span class="filename">03-audit-assurance.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./04-business-setup-dubai.jpg" alt="Business Setup" /></div>
+      <div class="card-body">
+        <div class="card-tag">Business Setup</div>
+        <div class="card-title">Company Formation & Setup</div>
+        <div class="card-desc">Executive business handshake marking successful company launch in Dubai.</div>
+        <div class="card-footer"><span class="filename">04-business-setup-dubai.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./05-bank-account-opening.jpg" alt="Bank Account Opening" /></div>
+      <div class="card-body">
+        <div class="card-tag">Banking</div>
+        <div class="card-title">Corporate Bank Account Opening</div>
+        <div class="card-desc">Corporate banking consultation, financial growth charts, and account approvals.</div>
+        <div class="card-footer"><span class="filename">05-bank-account-opening.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./06-cfo-financial-advisory.jpg" alt="CFO Advisory" /></div>
+      <div class="card-body">
+        <div class="card-tag">Advisory</div>
+        <div class="card-title">Outsourced CFO & Strategy</div>
+        <div class="card-desc">Executive leadership boardroom meeting discussing high-level corporate growth.</div>
+        <div class="card-footer"><span class="filename">06-cfo-financial-advisory.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./09-trade-license-dubai.jpg" alt="Trade License" /></div>
+      <div class="card-body">
+        <div class="card-tag">Licensing</div>
+        <div class="card-title">Trade License & DED Registration</div>
+        <div class="card-desc">Official commercial licensing, contract signing, and government approvals.</div>
+        <div class="card-footer"><span class="filename">09-trade-license-dubai.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./10-golden-visa-uae.jpg" alt="Golden Visa" /></div>
+      <div class="card-body">
+        <div class="card-tag">PRO & Residency</div>
+        <div class="card-title">UAE Golden Visa (10-Year)</div>
+        <div class="card-desc">Distinguished international entrepreneur and investor residency in the UAE.</div>
+        <div class="card-footer"><span class="filename">10-golden-visa-uae.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./11-software-cloud-accounting.jpg" alt="Software Solutions" /></div>
+      <div class="card-body">
+        <div class="card-tag">Technology</div>
+        <div class="card-title">Cloud Accounting & Software</div>
+        <div class="card-desc">Modern financial analytics dashboard, automated bookkeeping, and cloud ERP.</div>
+        <div class="card-footer"><span class="filename">11-software-cloud-accounting.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./13-dubai-skyline-downtown.jpg" alt="Dubai Downtown" /></div>
+      <div class="card-body">
+        <div class="card-tag">Location / City</div>
+        <div class="card-title">Dubai Downtown & Financial Hub</div>
+        <div class="card-desc">Iconic Dubai cityscape representing UAE commercial excellence.</div>
+        <div class="card-footer"><span class="filename">13-dubai-skyline-downtown.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./14-dubai-difc-architecture.jpg" alt="DIFC Architecture" /></div>
+      <div class="card-body">
+        <div class="card-tag">Commercial Towers</div>
+        <div class="card-title">DIFC Towers & Corporate Centers</div>
+        <div class="card-desc">Modern architectural skyscrapers in Dubai's premier financial center.</div>
+        <div class="card-footer"><span class="filename">14-dubai-difc-architecture.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./15-hero-business-consultation.jpg" alt="Hero Showcase" /></div>
+      <div class="card-body">
+        <div class="card-tag">Hero / About</div>
+        <div class="card-title">Premier Business Consultancy</div>
+        <div class="card-desc">Strategic advisory team collaborating in a sleek glass boardroom.</div>
+        <div class="card-footer"><span class="filename">15-hero-business-consultation.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./17-corporate-team-collaboration.jpg" alt="Team Collaboration" /></div>
+      <div class="card-body">
+        <div class="card-tag">Team</div>
+        <div class="card-title">Green Books Professional Team</div>
+        <div class="card-desc">Dynamic corporate tax and accounting specialists solving complex challenges.</div>
+        <div class="card-footer"><span class="filename">17-corporate-team-collaboration.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./18-financial-growth-analytics.jpg" alt="Growth Analytics" /></div>
+      <div class="card-body">
+        <div class="card-tag">Growth</div>
+        <div class="card-title">Business Growth & Profitability</div>
+        <div class="card-desc">Upward analytics, financial performance metrics, and profitability scaling.</div>
+        <div class="card-footer"><span class="filename">18-financial-growth-analytics.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./19-corporate-governance-meeting.jpg" alt="Governance" /></div>
+      <div class="card-body">
+        <div class="card-tag">Governance</div>
+        <div class="card-title">Boardroom Governance & Planning</div>
+        <div class="card-desc">Executive decision-making and statutory governance meetings.</div>
+        <div class="card-footer"><span class="filename">19-corporate-governance-meeting.jpg</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img-wrap"><img src="./20-modern-dubai-office.jpg" alt="Modern Office" /></div>
+      <div class="card-body">
+        <div class="card-tag">Office Space</div>
+        <div class="card-title">Modern Corporate Environment</div>
+        <div class="card-desc">Sleek, pristine executive workspace and client lounge.</div>
+        <div class="card-footer"><span class="filename">20-modern-dubai-office.jpg</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

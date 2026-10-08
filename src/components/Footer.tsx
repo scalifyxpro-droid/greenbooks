@@ -98,7 +98,7 @@ export default function Footer() {
                 <InstagramIcon className="w-4 h-4 text-white" />
               </a>
               <a
-                href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                href="https://maps.google.com/?q=Green+Books+Accounting+and+Tax+Services+Acico+Business+Park+Dubai"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Business Profile"
@@ -111,7 +111,7 @@ export default function Footer() {
             {/* Google Rating Trust Badge */}
             <div className="pt-2">
               <a
-                href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                href="https://maps.google.com/?q=Green+Books+Accounting+and+Tax+Services+Acico+Business+Park+Dubai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/5 border border-white/10 hover:border-white/25 px-3 py-1.5 rounded-lg text-xs text-gray-200 transition-colors"

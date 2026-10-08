@@ -174,7 +174,7 @@ export default function ContactSection() {
                   <InstagramIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://maps.google.com/?q=Acico+Business+Park+Port+Saeed+Deira+Dubai"
+                  href="https://maps.google.com/?q=Green+Books+Accounting+and+Tax+Services+Acico+Business+Park+Dubai"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google Business"
