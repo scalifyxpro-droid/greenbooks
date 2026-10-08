@@ -19,16 +19,52 @@ export default function EnquiryModal({ isOpen, onClose, defaultService = "Genera
     service: defaultService,
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2500);
+    setIsSubmitting(true);
+
+    const submissionData = {
+      fname: formData.firstName,
+      lname: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      message: formData.message,
+    };
+
+    const waText =
+      `*New Consultation Booking - Green Books*\n\n` +
+      `👤 *Name:* ${formData.firstName} ${formData.lastName}\n` +
+      `✉️ *Email:* ${formData.email}\n` +
+      `📞 *Phone:* ${formData.phone}\n` +
+      `📋 *Service:* ${formData.service}\n` +
+      `💬 *Message:* ${formData.message || "Consultation requested"}`;
+
+    const waUrl = `https://wa.me/971565568571?text=${encodeURIComponent(waText)}`;
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submissionData),
+      });
+    } catch (err) {
+      console.error("Failed to send consultation email:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      if (typeof window !== "undefined") {
+        window.open(waUrl, "_blank");
+      }
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3500);
+    }
   };
 
   return (
@@ -156,11 +192,15 @@ export default function EnquiryModal({ isOpen, onClose, defaultService = "Genera
 
               <button
                 type="submit"
-                className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md transition-all"
+                disabled={isSubmitting}
+                className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md transition-all disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4" />
-                <span>Submit Inquiry</span>
+                <span>{isSubmitting ? "Submitting Inquiry..." : "Submit & Chat on WhatsApp"}</span>
               </button>
+              <p className="text-[11px] text-gray-400 text-center">
+                Dispatches to <strong>Info@greenbooks.ae</strong> & WhatsApp <strong>+971 56 556 8571</strong>
+              </p>
             </form>
           </div>
         )}

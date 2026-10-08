@@ -1,11 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { LinkedInIcon, InstagramIcon, WhatsAppIcon, GoogleIcon } from "@/components/SocialIcons";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSubmittedData, setLastSubmittedData] = useState<{
+    fname: string;
+    lname: string;
+    email: string;
+    phone: string;
+    message: string;
+  } | null>(null);
+
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -14,13 +23,43 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const getWhatsAppUrl = (data = formData) => {
+    const text =
+      `*New Inquiry from Green Books Website*\n\n` +
+      `👤 *Name:* ${data.fname} ${data.lname}\n` +
+      `✉️ *Email:* ${data.email}\n` +
+      `📞 *Phone:* ${data.phone}\n` +
+      `💬 *Message:* ${data.message}`;
+
+    return `https://wa.me/971565568571?text=${encodeURIComponent(text)}`;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+
+    const submissionCopy = { ...formData };
+    const waUrl = getWhatsAppUrl(submissionCopy);
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submissionCopy),
+      });
+    } catch (err) {
+      console.error("Failed to send email to info@greenbooks.ae:", err);
+    } finally {
+      setIsSubmitting(false);
+      setLastSubmittedData(submissionCopy);
+      setSubmitted(true);
       setFormData({ fname: "", lname: "", email: "", phone: "", message: "" });
-    }, 4000);
+
+      // Automatically launch WhatsApp in a new tab
+      if (typeof window !== "undefined") {
+        window.open(waUrl, "_blank");
+      }
+    }
   };
 
   return (
@@ -153,12 +192,32 @@ export default function ContactSection() {
             className="w-full md:w-[55%] p-8 rounded-2xl border border-gray-200 border-t-8 border-t-[#00A82B] bg-white shadow-sm flex flex-col justify-between"
           >
             {submitted ? (
-              <div className="py-16 text-center space-y-4">
+              <div className="py-12 text-center space-y-5">
                 <CheckCircle2 className="w-16 h-16 text-[#00A82B] mx-auto animate-bounce" />
-                <h3 className="text-2xl font-bold text-[#2E3880]">Message Sent!</h3>
-                <p className="text-gray-600 max-w-sm mx-auto">
-                  Thank you for reaching out. A senior Green Books consultant will contact you within 24 hours.
+                <h3 className="text-2xl font-bold text-[#2E3880]">Thank You! Message Dispatched</h3>
+                <p className="text-gray-600 max-w-md mx-auto text-sm leading-relaxed">
+                  Your inquiry details have been forwarded to <strong className="text-gray-800">Info@greenbooks.ae</strong> and prepared for WhatsApp (<strong className="text-gray-800">+971 56 556 8571</strong>).
                 </p>
+
+                <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                  <a
+                    href={getWhatsAppUrl(lastSubmittedData || { fname: "", lname: "", email: "", phone: "", message: "" })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#00A82B] hover:bg-[#008A22] text-white font-bold rounded-xl shadow-md transition-all text-sm"
+                  >
+                    <WhatsAppIcon className="w-5 h-5 text-white" />
+                    <span>Open WhatsApp Chat</span>
+                  </a>
+
+                  <button
+                    type="button"
+                    onClick={() => setSubmitted(false)}
+                    className="inline-flex items-center justify-center px-5 py-3 border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold rounded-xl transition-all text-sm"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="space-y-5">
@@ -238,13 +297,39 @@ export default function ContactSection() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group text-sm"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                <div className="space-y-3 pt-2">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group text-sm disabled:opacity-75 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Sending Message...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </>
+                    )}
+                  </button>
+
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full border border-[#00A82B] bg-[#00A82B]/5 hover:bg-[#00A82B] text-[#00A82B] hover:text-white font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm"
+                  >
+                    <WhatsAppIcon className="w-4 h-4" />
+                    <span>Send via WhatsApp (+971 56 556 8571)</span>
+                  </a>
+                </div>
+
+                <p className="text-[11px] text-gray-400 text-center font-normal">
+                  Inquiries are directed to <strong>Info@greenbooks.ae</strong> & WhatsApp <strong>+971 56 556 8571</strong>
+                </p>
               </div>
             )}
           </form>

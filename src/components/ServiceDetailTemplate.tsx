@@ -19,6 +19,7 @@ interface ServiceDetailTemplateProps {
 
 export default function ServiceDetailTemplate({ service }: ServiceDetailTemplateProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,13 +27,47 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 4000);
+    setIsSubmitting(true);
+
+    const submissionData = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      service: service.title,
+      message: formData.message,
+    };
+
+    const waText =
+      `*New Service Inquiry - Green Books*\n\n` +
+      `📋 *Service:* ${service.title}\n` +
+      `👤 *Name:* ${formData.name}\n` +
+      `✉️ *Email:* ${formData.email}\n` +
+      `📞 *Phone:* ${formData.phone}\n` +
+      `💬 *Requirements:* ${formData.message || "Consultation requested"}`;
+
+    const waUrl = `https://wa.me/971565568571?text=${encodeURIComponent(waText)}`;
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submissionData),
+      });
+    } catch (err) {
+      console.error("Failed to send inquiry email:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      if (typeof window !== "undefined") {
+        window.open(waUrl, "_blank");
+      }
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      }, 4000);
+    }
   };
 
   return (
@@ -216,11 +251,15 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
 
                 <button
                   type="submit"
-                  className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md transition-all"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#00A82B] hover:bg-[#008A22] text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-md transition-all disabled:opacity-75 disabled:cursor-not-allowed"
                 >
                   <Send className="w-3.5 h-3.5" />
-                  <span>Submit Inquiry</span>
+                  <span>{isSubmitting ? "Submitting Inquiry..." : "Submit & Chat on WhatsApp"}</span>
                 </button>
+                <p className="text-[10px] text-gray-400 text-center">
+                  Sent to <strong>Info@greenbooks.ae</strong> & WhatsApp <strong>+971 56 556 8571</strong>
+                </p>
               </form>
             )}
 
