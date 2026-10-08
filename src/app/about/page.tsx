@@ -41,7 +41,7 @@ const GALLERY = [
   "/stock-images/02-accounting-bookkeeping.jpg",
   "/stock-images/03-audit-assurance.jpg",
   "/stock-images/09-trade-license-dubai.jpg",
-  "/stock-images/10-golden-visa-uae.jpg",
+  "/stock-images/financial-audit-reports.jpg",
   "/stock-images/11-software-cloud-accounting.jpg",
 ];
 

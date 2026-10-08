@@ -42,8 +42,8 @@ export default function AboutSection() {
       {/* Image Column */}
       <div className="w-full md:w-1/2 shrink-0 relative min-h-[380px] md:min-h-[500px] overflow-hidden group">
         <Image
-          src="/stock-images/accounting-books-records.jpg"
-          alt="Green Books Financial Consulting and Accounting Records"
+          src="/stock-images/audit-tax-documents.jpg"
+          alt="Green Books Audit, Tax and Financial Accounting Services"
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
