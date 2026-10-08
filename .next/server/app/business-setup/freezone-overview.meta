@@ -1,0 +1,40 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/business-setup/layout,_N_T_/business-setup/[slug]/layout,_N_T_/business-setup/[slug]/page,_N_T_/business-setup/freezone-overview"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/_index",
+    "/business-setup/$d$slug/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 0,
+    "slots": {
+      "children": {
+        "hints": 64,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 160,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/905a0acb7eff5be1dfd994fb90f430b2325bdc064a344e12d471153435559635/$/business-setup/freezone-overview",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/business-setup/[slug]/page"
+    },
+    "isFallback": false
+  }
+}

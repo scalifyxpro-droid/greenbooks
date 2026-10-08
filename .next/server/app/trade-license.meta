@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/trade-license/layout,_N_T_/trade-license/page,_N_T_/trade-license"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/_index",
+    "/trade-license/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 0,
+    "slots": {
+      "children": {
+        "hints": 64,
+        "slots": {
+          "children": {
+            "hints": 160,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/40b1769ab800f93497f8a9480e242e2c50177797d17cd5cab6d88782ba86b800/$/trade-license",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/trade-license/page"
+    },
+    "isFallback": false
+  }
+}

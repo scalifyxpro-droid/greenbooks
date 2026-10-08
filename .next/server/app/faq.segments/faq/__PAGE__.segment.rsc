@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/45b2xvhob46ot.js"
+4:"/_next/static/chunks/2is378o12h8hx.js"
+5:I[39756,["$3","$4"],"default"]
+6:I[37457,["$3","$4"],"default"]
+b:"/_next/static/chunks/1ujm88jj60p2g.js"
+c:I[23614,["$3","$4","$b"],"default"]
+d:I[5014,["$3","$4","$b"],"default"]
+e:I[22016,["$3","$4","$b"],""]
+f:I[97367,["$3","$4"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3","$4"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3","$4"],"$15"]
+17:I[27201,["$3","$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","main",null,{"className":"min-h-screen pt-24 bg-white","children":[["$","section",null,{"className":"bg-[#2E3880] text-white py-16 px-6 sm:px-12 text-center","children":["$","div",null,{"className":"max-w-4xl mx-auto","children":[["$","span",null,{"className":"text-xs uppercase tracking-widest font-bold text-[#00A82B]","children":"Support & Answers"}],["$","h1",null,{"className":"text-3xl sm:text-5xl font-extrabold mt-2 tracking-tight","children":"Frequently Asked Questions"}],["$","p",null,{"className":"mt-4 text-base sm:text-lg text-gray-200 max-w-2xl mx-auto font-light","children":"Everything you need to know about UAE financial regulations, accounting standards, and business setup procedures with Green Books."}]]}]}],["$","$Lc",null,{}],["$","section",null,{"className":"py-16 bg-[#F4F9F5] px-6 sm:px-12 text-center border-t border-green-100","children":["$","div",null,{"className":"max-w-3xl mx-auto","children":[["$","$Ld",null,{"icon":{"name":"circle-question-mark","size":24,"node":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["path",{"d":"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3","key":"1u773s"}],["path",{"d":"M12 17h.01","key":"p32p05"}]],"aliases":["help-circle","circle-help"]},"className":"w-12 h-12 text-[#00A82B] mx-auto mb-4"}],["$","h2",null,{"className":"text-2xl sm:text-3xl font-bold text-[#2E3880]","children":"Still have questions?"}],["$","p",null,{"className":"text-gray-600 mt-2 text-sm sm:text-base font-light","children":"Can't find the answer you're looking for? Reach out directly to our team of chartered accountants at Green Books."}],["$","div",null,{"className":"mt-6","children":["$","$Le",null,{"href":"/contact","className":"inline-flex items-center gap-2 bg-[#00A82B] hover:bg-[#008A22] text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-sm","children":[["$","span",null,{"children":"Speak to an Advisor"}],["$","$Ld",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"w-4 h-4"}]]}]}]]}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1ujm88jj60p2g.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$9"}}]]
+1:[["children",{"s":"faq","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FAQs | Green Books Chartered Accountants Dubai"}],["$","meta","1",{"name":"description","content":"Frequently asked questions regarding corporate tax, VAT, company formation, auditing, and accounting services in UAE by Green Books."}],["$","link","2",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","3",{"property":"og:title","content":"Green Books Accounting And Tax Services Dubai"}],["$","meta","4",{"property":"og:description","content":"Expert chartered accountants and licensed tax consultants in Dubai UAE offering statutory audit, corporate tax, VAT, and business formation."}],["$","meta","5",{"property":"og:url","content":"https://greenbooks.ae/"}],["$","meta","6",{"property":"og:site_name","content":"Green Books Accounting And Tax Services"}],["$","meta","7",{"property":"og:image","content":"http://localhost:3000/green-books-logo-transparent.png"}],["$","meta","8",{"property":"og:image:width","content":"800"}],["$","meta","9",{"property":"og:image:height","content":"600"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Green Books Accounting And Tax Services Dubai"}],["$","meta","13",{"name":"twitter:description","content":"Expert chartered accountants and licensed tax consultants in Dubai UAE offering statutory audit, corporate tax, VAT, and business formation."}],["$","meta","14",{"name":"twitter:image","content":"http://localhost:3000/green-books-logo-transparent.png"}],["$","meta","15",{"name":"twitter:image:width","content":"800"}],["$","meta","16",{"name":"twitter:image:height","content":"600"}],["$","link","17",{"rel":"shortcut icon","href":"/favicon.ico"}],["$","link","18",{"rel":"icon","href":"/favicon.ico?favicon.2ac8yyo5qntcm.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","19",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","20",{"rel":"icon","href":"/favicon-32x32.png","type":"image/png","sizes":"32x32"}],["$","link","21",{"rel":"icon","href":"/favicon-16x16.png","type":"image/png","sizes":"16x16"}],["$","link","22",{"rel":"icon","href":"/green-books-icon.png","type":"image/png","sizes":"512x512"}],["$","link","23",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L17","24",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$9"}},"a":"$@19","u":"$@1a","b":"Or07EVPAvcrkRaBp_jLYl"}
+11:null
+1a:true
+9:300
+9:C
+19:0
+7:"$undefined"
+18:"$undefined"
+12:"$undefined"

@@ -1,0 +1,40 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/accounting/layout,_N_T_/accounting/[slug]/layout,_N_T_/accounting/[slug]/page,_N_T_/accounting/bank-reconciliation"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/_index",
+    "/accounting/$d$slug/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 0,
+    "slots": {
+      "children": {
+        "hints": 64,
+        "slots": {
+          "children": {
+            "hints": 96,
+            "slots": {
+              "children": {
+                "hints": 160,
+                "slots": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/756d056ce02edf0bab0a5459ccdf6c5e5ae30e275ab626ee7369e35ca7af05b1/$/accounting/bank-reconciliation",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/accounting/[slug]/page"
+    },
+    "isFallback": false
+  }
+}
