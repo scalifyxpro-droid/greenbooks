@@ -14,8 +14,8 @@ export default function Hero({ onOpenEnquire }: HeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/stock-images/13-dubai-skyline-downtown.jpg"
-          alt="Dubai Skyline Business District"
+          src="/stock-images/15-hero-business-consultation.jpg"
+          alt="Green Books Client Consultation and Financial Advisory"
           fill
           priority
           sizes="100vw"

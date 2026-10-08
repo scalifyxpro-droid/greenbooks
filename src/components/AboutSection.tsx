@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full flex flex-col md:flex-row justify-between items-stretch bg-gradient-to-r from-[#F0F8F3] via-[#F4F9F5] to-[#ECF6F0] border-b border-green-100/80">
+    <section id="about" className="w-full flex flex-col md:flex-row justify-between items-stretch bg-gradient-to-r from-[#D7EDE0] via-[#E2F4E9] to-[#D7EDE0] border-b border-green-200/90">
       {/* Content Column */}
       <div className="w-full md:w-1/2 shrink-0 px-8 sm:px-12 md:px-16 lg:px-20 py-14 sm:py-20 flex flex-col justify-center">
         <div className="border-l-4 border-[#00A82B] pl-4">

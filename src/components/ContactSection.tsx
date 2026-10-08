@@ -63,7 +63,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 sm:px-12 md:px-16 lg:px-20 bg-gradient-to-b from-[#F2F8F4] via-[#F7FAF8] to-[#EEF6F1] border-t border-green-100">
+    <section id="contact" className="py-20 px-6 sm:px-12 md:px-16 lg:px-20 bg-gradient-to-b from-[#D7EDE0] via-[#E2F4E9] to-[#D7EDE0] border-t border-green-200">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-[#00A82B]">

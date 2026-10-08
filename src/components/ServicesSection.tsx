@@ -65,7 +65,7 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 px-6 sm:px-12 md:px-16 lg:px-20 bg-gradient-to-b from-[#EEF4FB] via-[#F4F8FC] to-[#EEF4FB] border-y border-blue-100/70">
+    <section id="services" className="py-20 px-6 sm:px-12 md:px-16 lg:px-20 bg-gradient-to-b from-[#DCE7F5] via-[#E6F0FA] to-[#DCE7F5] border-y border-blue-200/80">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">

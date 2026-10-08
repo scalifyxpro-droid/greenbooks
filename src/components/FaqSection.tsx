@@ -49,7 +49,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="w-full py-16 md:py-24 px-6 sm:px-12 md:px-16 flex flex-col items-center bg-gradient-to-b from-[#F0F5FA] via-[#F5F9FD] to-[#EDF3F9] border-t border-blue-100/60">
+    <section id="faq" className="w-full py-16 md:py-24 px-6 sm:px-12 md:px-16 flex flex-col items-center bg-gradient-to-b from-[#DCE7F5] via-[#E4EFF9] to-[#DCE7F5] border-t border-blue-200/80">
       <div className="max-w-4xl w-full">
         {/* Section Heading */}
         <div className="text-center mb-12">
