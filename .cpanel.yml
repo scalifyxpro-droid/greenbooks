@@ -1,15 +1,6 @@
 ---
 deployment:
   tasks:
-    # Identify cPanel user and set target deployment path
-    - export CPANEL_USER=$(whoami)
-    - export DEPLOYPATH=${DEPLOYPATH:-/home/$CPANEL_USER/public_html}
-    - /bin/mkdir -p $DEPLOYPATH
-    
-    # Copy project files to destination
-    - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp -R .next $DEPLOYPATH 2>/dev/null || true
-    
-    # Trigger Phusion Passenger app restart
-    - /bin/mkdir -p $DEPLOYPATH/tmp
-    - /bin/touch $DEPLOYPATH/tmp/restart.txt
+    # Trigger Phusion Passenger app reload after Git pull
+    - /bin/mkdir -p tmp
+    - /bin/touch tmp/restart.txt
