@@ -47,7 +47,7 @@ const GALLERY = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-24 bg-white">
+    <main className="min-h-screen pt-24 bg-[#F8FAFD]">
       {/* Hero Banner */}
       <section className="relative w-full py-24 md:py-32 bg-[#2E3880] text-white overflow-hidden">
         <div className="absolute inset-0 w-full h-full opacity-20">
