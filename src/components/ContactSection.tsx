@@ -26,10 +26,10 @@ export default function ContactSection() {
   const getWhatsAppUrl = (data = formData) => {
     const text =
       `*New Inquiry from Green Books Website*\n\n` +
-      `👤 *Name:* ${data.fname} ${data.lname}\n` +
-      `✉️ *Email:* ${data.email}\n` +
-      `📞 *Phone:* ${data.phone}\n` +
-      `💬 *Message:* ${data.message}`;
+      `*Name:* ${data.fname} ${data.lname}\n` +
+      `*Email:* ${data.email}\n` +
+      `*Phone:* ${data.phone}\n` +
+      `*Message:* ${data.message}`;
 
     return `https://wa.me/971565568571?text=${encodeURIComponent(text)}`;
   };
@@ -315,16 +315,6 @@ export default function ContactSection() {
                       </>
                     )}
                   </button>
-
-                  <a
-                    href={getWhatsAppUrl()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full border border-[#00A82B] bg-[#00A82B]/5 hover:bg-[#00A82B] text-[#00A82B] hover:text-white font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm"
-                  >
-                    <WhatsAppIcon className="w-4 h-4" />
-                    <span>Send via WhatsApp (+971 56 556 8571)</span>
-                  </a>
                 </div>
 
                 <p className="text-[11px] text-gray-400 text-center font-normal">

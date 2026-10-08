@@ -38,11 +38,11 @@ export default function EnquiryModal({ isOpen, onClose, defaultService = "Genera
 
     const waText =
       `*New Consultation Booking - Green Books*\n\n` +
-      `👤 *Name:* ${formData.firstName} ${formData.lastName}\n` +
-      `✉️ *Email:* ${formData.email}\n` +
-      `📞 *Phone:* ${formData.phone}\n` +
-      `📋 *Service:* ${formData.service}\n` +
-      `💬 *Message:* ${formData.message || "Consultation requested"}`;
+      `*Name:* ${formData.firstName} ${formData.lastName}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Service:* ${formData.service}\n` +
+      `*Message:* ${formData.message || "Consultation requested"}`;
 
     const waUrl = `https://wa.me/971565568571?text=${encodeURIComponent(waText)}`;
 

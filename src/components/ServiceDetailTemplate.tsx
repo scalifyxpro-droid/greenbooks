@@ -41,11 +41,11 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
 
     const waText =
       `*New Service Inquiry - Green Books*\n\n` +
-      `📋 *Service:* ${service.title}\n` +
-      `👤 *Name:* ${formData.name}\n` +
-      `✉️ *Email:* ${formData.email}\n` +
-      `📞 *Phone:* ${formData.phone}\n` +
-      `💬 *Requirements:* ${formData.message || "Consultation requested"}`;
+      `*Service:* ${service.title}\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Requirements:* ${formData.message || "Consultation requested"}`;
 
     const waUrl = `https://wa.me/971565568571?text=${encodeURIComponent(waText)}`;
 
